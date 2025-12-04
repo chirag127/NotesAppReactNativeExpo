@@ -1,98 +1,105 @@
-# Contributing to InkWell-Note-Taking-Mobile-App
+# Contributing to InkWell
 
-Thank you for considering contributing to InkWell! We welcome all contributions, from bug reports and feature requests to code contributions and documentation improvements.
+First off, thank you for considering a contribution to InkWell. We are building a world-class, cross-platform note-taking application, and we value every contribution, from documentation updates to major new features.
 
-This project adheres to the Apex Technical Authority standards. All contributions must align with these principles, ensuring high quality, velocity, and future-proofing.
+Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open source project. In return, they should reciprocate that respect in addressing your issue or assessing patches and features.
 
-## 1. Code of Conduct
+## Code of Conduct
 
-This project adheres to the Contributor Covenant Code of Conduct. Please review the [CODE_OF_CONDUCT.md](https://github.com/chirag127/InkWell-Note-Taking-Mobile-App/blob/main/CODE_OF_CONDUCT.md) file for details on expected behavior.
+This project and everyone participating in it is governed by our [Code of Conduct](./CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior.
 
-## 2. How to Contribute
+## How Can I Contribute?
 
-### 2.1 Reporting Bugs
+### Reporting Bugs
 
-1.  **Search Existing Issues:** Before reporting a bug, please check our existing [Issues](https://github.com/chirag127/InkWell-Note-Taking-Mobile-App/issues) to see if it has already been reported.
-2.  **Create a New Issue:** If your bug is not already reported, please create a new issue using the **Bug Report** template. Provide as much detail as possible, including:
-    *   A clear and concise description of the bug.
-    *   Steps to reproduce the bug.
-    *   The expected behavior vs. the actual behavior.
-    *   Your environment (OS, device, InkWell version).
-    *   Relevant screenshots or error logs.
+Bugs are tracked as GitHub issues. Before creating a bug report, please check our [issues list](https://github.com/chirag127/InkWell-Note-Taking-Mobile-App/issues) as you might find out that you don't need to create one. When you are creating a bug report, please include as many details as possible by filling out the [Bug Report Template](https://github.com/chirag127/InkWell-Note-Taking-Mobile-App/issues/new?template=bug_report.md).
 
-### 2.2 Suggesting Enhancements
+### Suggesting Enhancements
 
-If you have an idea for a new feature or an improvement to an existing one, please create a new issue using the **Feature Request** template.
+Enhancement suggestions are tracked as GitHub issues. Create a new issue using the Feature Request template, providing as much context and detail as possible.
 
-### 2.3 Submitting Pull Requests (Code Contributions)
+### Your First Code Contribution
 
-We encourage you to submit pull requests (PRs) for bug fixes and new features.
+Unsure where to begin contributing to InkWell? You can start by looking through `good-first-issue` and `help-wanted` issues:
 
-1.  **Fork the Repository:** Create a fork of the `chirag127/InkWell-Note-Taking-Mobile-App` repository.
-2.  **Clone Your Fork:** Clone your forked repository to your local machine:
+- **Good first issues** - issues which should only require a few lines of code, and a test or two.
+- **Help wanted issues** - issues which should be a bit more involved than `good-first-issue` issues.
+
+### Pull Requests
+
+The process described here has several goals:
+- Maintain project quality
+- Fix problems that are important to users
+- Enable a sustainable system for maintainers to review contributions
+
+Please follow these steps to have your contribution considered by the maintainers:
+
+1.  **Fork and Clone:** Fork the repository to your own GitHub account and then clone it to your local machine.
     bash
-    git clone https://github.com/chirag127/InkWell-Note-Taking-Mobile-App.git
+    git clone https://github.com/<your-username>/InkWell-Note-Taking-Mobile-App.git
     cd InkWell-Note-Taking-Mobile-App
     
-3.  **Create a New Branch:** Create a descriptive branch for your changes:
+
+2.  **Set Up:** Install all dependencies.
     bash
-    git checkout -b feature/your-new-feature
-    # or
-    git checkout -b fix/bug-description
-    
-4.  **Make Your Changes:** Implement your bug fix or new feature. Follow the architectural guidelines and coding standards outlined in the project's documentation (refer to `AGENTS.md` for specific tech stack directives).
-5.  **Install Dependencies:**
-    bash
-    npm install
-    # or
+    # Using yarn
     yarn install
     
-6.  **Run Linters and Tests:** Ensure your changes pass all automated checks:
+
+3.  **Create a Branch:** Create a new branch from `main`. Use a descriptive name.
     bash
-    npm run lint
-    npm run test
+    # Examples
+    git checkout -b feat/add-rich-text-editor
+    git checkout -b fix/login-button-alignment
     
-    *Note: Consult `AGENTS.md` for specific commands if they differ.* 
-7.  **Commit Your Changes:** Write clear and concise commit messages.
+
+4.  **Code:** Make your changes to the codebase.
+
+5.  **Lint and Format:** Ensure your code adheres to our style guidelines. We use ESLint and Prettier.
     bash
-    git add .
-    git commit -m "feat: Add intuitive note editing functionality"
+    yarn lint
+    yarn format
     
-8.  **Push to Your Fork:** Push your branch to your fork on GitHub:
+
+6.  **Test:** Add or update tests for your changes. All tests must pass.
     bash
-    git push origin feature/your-new-feature
+    yarn test
     
-9.  **Open a Pull Request:** Navigate to the original repository (`chirag127/InkWell-Note-Taking-Mobile-App`) and open a new pull request from your branch. Ensure your PR description is clear and references any related issues.
 
-### 2.4 Development Environment Setup (React Native & Expo)
+7.  **Commit:** Commit your changes using the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification. This is mandatory.
+    bash
+    # Examples
+    git commit -m "feat: Implement note tagging functionality"
+    git commit -m "fix: Correct layout issue on Android tablets"
+    git commit -m "docs: Update contribution guidelines"
+    
 
-Refer to the main `README.md` for detailed setup instructions. Typically, this involves:
+8.  **Push:** Push your changes to your fork.
+    bash
+    git push origin feat/your-feature-branch
+    
 
-*   **Node.js and npm/yarn:** Ensure you have a compatible version installed.
-*   **Expo CLI:** Install globally: `npm install -g expo-cli`.
-*   **Native Dependencies:** Follow Expo's documentation for setting up Android Studio or Xcode if needed for device testing.
+9.  **Open a Pull Request:** Open a pull request against our `main` branch. Fill out the [Pull Request Template](https://github.com/chirag127/InkWell-Note-Taking-Mobile-App/blob/main/.github/PULL_REQUEST_TEMPLATE.md) completely. Link the PR to any relevant issues.
 
-## 3. Project Structure & Architecture
+## Development Environment Setup
 
-This project follows the **Feature-Sliced Design (FSD)** pattern to maintain a scalable and maintainable codebase. Please familiarize yourself with FSD principles before making significant architectural changes.
+- **Node.js:** Use the latest LTS version.
+- **Yarn:** Use the latest stable version of Yarn Classic.
+- **Expo CLI:** `npm install -g expo-cli`
+- **Mobile Simulators:** Xcode (for iOS) or Android Studio (for Android).
 
-Refer to the `AGENTS.md` file for specific technical stack details, linter configurations, and testing frameworks used.
+To start the development server:
+bash
+npx expo start
 
-## 4. Coding Standards & Guidelines
 
-*   **Language:** TypeScript (Strict mode enabled).
-*   **Formatting & Linting:** Utilize **Biome** for code formatting and linting. The configuration is managed in `biome.json`.
-*   **Testing:** Employ **Vitest** for unit tests and **Playwright** for end-to-end (E2E) tests. All new code should be accompanied by relevant tests.
-*   **SOLID Principles:** Adhere to SOLID principles (Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion) to ensure robust and maintainable code.
-*   **DRY (Don't Repeat Yourself):** Avoid redundant code by abstracting common functionalities.
-*   **YAGNI (You Ain't Gonna Need It):** Implement features based on current needs rather than anticipating future requirements.
+## Architectural Principles
 
-## 5. Versioning & Releases
+To maintain code quality and consistency, we adhere to the following principles:
 
-This project uses Semantic Versioning (SemVer). Please ensure your contributions align with the established versioning strategy. Major changes or features should be discussed before implementation.
+- **SOLID:** Our codebase follows SOLID principles to ensure it is maintainable, scalable, and robust.
+- **DRY (Don't Repeat Yourself):** Avoid code duplication by creating reusable components and services.
+- **Clean Code:** Write readable, simple, and self-documenting code.
+- **TypeScript Strict Mode:** All contributions must be strictly typed to prevent common errors.
 
-## 6. Questions & Support
-
-If you have any questions or need clarification on the contribution process, please open an issue.
-
-We appreciate your efforts in making InkWell a better tool for everyone!
+By contributing to InkWell, you agree that your contributions will be licensed under its [CC BY-NC 4.0 License](./LICENSE).
